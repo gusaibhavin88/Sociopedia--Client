@@ -1,0 +1,115 @@
+.base {
+  background-color: var(--inputColor);
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.backfade {
+  width: 20rem;
+  height: 30rem;
+  position: fixed;
+  background-color: #a6ddf0;
+  border-radius: 50%;
+  filter: blur(7.2rem);
+  z-index: -10;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  gap: 4rem;
+}
+.authleft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.authleft > .authleftimage {
+  width: 10rem;
+  height: 10rem;
+}
+.sitename {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.sitename > h1 {
+  font-size: 6rem;
+}
+.sitename > h3 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.middleline {
+  border: 1px solid var(--hrColor);
+  height: 50vh;
+}
+.signup {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  gap: 8rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+.signup > h1 {
+  font-size: 2.5rem;
+}
+.form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  flex-direction: column;
+}
+.form > input {
+  width: 100%;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: var(--inputColor);
+  outline: none;
+}
+.signup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+.signup > h1 {
+  align-self: center;
+}
+
+.forminput {
+  display: flex;
+  gap: 1rem;
+}
+
+.forminput > input {
+  padding: 1.5rem;
+  background: var(--inputColor);
+  border: none;
+  outline: none;
+
+  border-radius: 5px;
+}
+.form > button {
+  width: 8rem;
+  height: 3rem;
+  border-radius: 5px;
+  border: none;
+  background: var(--buttonBg);
+  color: white;
+  align-self: flex-end;
+  outline: none;
+}
+.form > span {
+  color: black;
+  font-size: 1.4rem;
+  align-self: center;
+  outline: none;
+}

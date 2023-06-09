@@ -1,0 +1,74 @@
+.sharepost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 1.5rem;
+}
+
+.inputbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  outline: none;
+  border: none;
+  justify-content: space-between;
+}
+.inputbar > input {
+  outline: none;
+  border: none;
+  background-color: var(--inputColor);
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.sharebtns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: flex-end;
+  min-width: 90%;
+}
+
+.option {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sharebtns > button {
+  color: white;
+  background: var(--buttonBg);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  transition: all ease 400ms;
+}
+
+.sharebtns > button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.flexticon {
+  width: "50px";
+  height: "50px";
+}
+
+@media (max-width: 1280px) {
+  .flexticon {
+    width: "50px";
+    height: "50px";
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}

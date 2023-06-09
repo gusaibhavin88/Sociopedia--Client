@@ -1,0 +1,31 @@
+.trendcard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: var(--cardColor);
+}
+.trenditems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1rem;
+}
+
+.trenditems > span:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.trenditems > span:nth-of-type(2) {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.rightshare {
+  transition: all 400ms ease;
+}
+
+.rightshare:hover {
+  transform: scale(1.01);
+}

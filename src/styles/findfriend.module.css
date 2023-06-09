@@ -1,0 +1,53 @@
+.findfriend {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 50vh;
+}
+.findfriend > h3 {
+  align-self: flex-start;
+  font-size: 1.4rem;
+  margin: 1rem 0rem;
+}
+
+.friendinfo {
+  display: flex;
+  flex-direction: row;
+  width: 35rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexseting {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nameinfo {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  justify-self: auto;
+}
+.nameinfo > h4:nth-last-of-type(1) {
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+.nameinfo > h4:nth-last-of-type(2) {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.friendinfo > button {
+  color: white;
+  background: var(--buttonBg);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  transition: all 400ms ease;
+}
+
+.friendinfo > button:hover {
+  cursor: pointer;
+}

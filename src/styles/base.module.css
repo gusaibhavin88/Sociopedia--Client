@@ -1,0 +1,16 @@
+.base {
+  background-color: var(--inputColor);
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.backfade {
+  width: 20rem;
+  height: 30rem;
+  position: fixed;
+  background-color: #a6ddf0;
+  border-radius: 50%;
+  filter: blur(7.2rem);
+  z-index: -10;
+}

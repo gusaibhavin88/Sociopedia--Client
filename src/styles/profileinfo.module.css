@@ -1,0 +1,29 @@
+.profileinfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--cardColor);
+  border-radius: 1.5rem;
+  gap: 1.5rem;
+}
+.profileinfo > button {
+  border-radius: 5px;
+  background: var(--buttonBg);
+  padding: 8px 10px;
+  color: white;
+  outline: none;
+  border: none;
+  align-self: flex-end;
+  width: 60px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+.infodata {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
