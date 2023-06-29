@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import Post from "./post";
 import { useDispatch, useSelector } from "react-redux";
+import ReactLoading from "react-loading";
 import { getAllPosts, getPostUrl } from "@/redux/action/postaction";
+import styles from "../styles/post.module.css";
 
 const Posts = ({ location }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
-  const loading = useSelector((state) => state.auth.isLoading);
+  const loading = useSelector((state) => state.auth.postLoading);
   const post = useSelector((state) => state.auth.post);
   const posturl = useSelector((state) => state.auth.posturl);
 
@@ -75,7 +77,18 @@ const Posts = ({ location }) => {
               })
           ) : (
             <h1 style={{ color: "var(--gray)", alignSelf: "center" }}>
-              {loading ? "Loading" : "No Posts"}
+              {loading ? (
+                <div className={styles.loginloading}>
+                  <ReactLoading
+                    type="bubbles"
+                    color="#0000FF"
+                    height={100}
+                    width={50}
+                  />
+                </div>
+              ) : (
+                "No Posts"
+              )}
             </h1>
           )}
         </>
@@ -100,7 +113,18 @@ const Posts = ({ location }) => {
             })
           ) : (
             <h1 style={{ color: "var(--gray)", alignSelf: "center" }}>
-              {loading ? "Loading" : "No Posts"}
+              {loading ? (
+                <div className={styles.loginloading}>
+                  <ReactLoading
+                    type="bubbles"
+                    color="#0000FF"
+                    height={100}
+                    width={50}
+                  />
+                </div>
+              ) : (
+                "No Posts"
+              )}
             </h1>
           )}
         </>

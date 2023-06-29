@@ -10,6 +10,8 @@ const initialState = {
   post: null,
   posturl: null,
   allusers: null,
+  loginLoading: null,
+  postLoading: null,
 };
 
 //authReduser
@@ -47,13 +49,13 @@ const authSlice = createSlice({
     },
 
     loginStart: (state) => {
-      state.isLoading = true;
+      state.loginLoading = true;
       state.error = null;
       state.success = false;
       state.isAuthenticated = false;
     },
     loginSuccess: (state, action) => {
-      state.isLoading = false;
+      state.loginLoading = false;
       state.error = null;
       state.success = true;
       state.isAuthenticated = true;
@@ -68,7 +70,7 @@ const authSlice = createSlice({
       );
     },
     loginFail: (state, action) => {
-      state.isLoading = false;
+      state.loginLoading = false;
       state.error = action.payload;
       state.success = false;
       state.isAuthenticated = false;
@@ -125,14 +127,14 @@ const authSlice = createSlice({
     // Get all Posts
 
     getAllPostsStart: (state) => {
-      state.isLoading = true;
+      state.postLoading = true;
       state.error = null;
       state.success = false;
       state.isAuthenticated = true;
       state.post = null;
     },
     getAllPostsSuccess: (state, action) => {
-      state.isLoading = false;
+      state.postLoading = false;
       state.error = null;
       state.success = true;
       state.isAuthenticated = true;
@@ -140,7 +142,7 @@ const authSlice = createSlice({
       localStorage.setItem("post", JSON.stringify({ ...action?.payload.data }));
     },
     getAllPostsFail: (state, action) => {
-      state.isLoading = false;
+      state.postLoading = false;
       state.error = action.payload;
       state.success = false;
       state.post = null;

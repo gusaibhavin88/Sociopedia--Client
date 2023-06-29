@@ -5,6 +5,7 @@ import styles from "../styles/auth.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { logInUser, registerUser } from "@/redux/action/authaction";
 import { useRouter } from "next/router";
+import ReactLoading from "react-loading";
 
 const Auth = () => {
   const [isSignup, setisSignup] = useState(false);
@@ -12,6 +13,7 @@ const Auth = () => {
   const dispatch = useDispatch();
   const error = useSelector((state) => state.auth.error);
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const loginLoading = useSelector((state) => state.auth.loginLoading);
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -63,14 +65,12 @@ const Auth = () => {
 
   return (
     <div className={styles.base}>
-      <div
-        className={styles.backfade}
-        style={{ top: "-18%", right: "0" }}
-      ></div>
-      <div
-        className={styles.backfade}
-        style={{ top: "36%", left: "-8rem" }}
-      ></div>
+      {loginLoading && (
+        <div className={styles.loginloading}>
+          <ReactLoading type="spin" color="#0000FF" height={100} width={50} />
+        </div>
+      )}
+
       <div className={styles.auth}>
         <div className={styles.authleft}>
           <Image
@@ -197,6 +197,14 @@ const Auth = () => {
           </div>
         )}
       </div>
+      <div
+        className={styles.backfade}
+        style={{ top: "-18%", right: "0" }}
+      ></div>
+      <div
+        className={styles.backfade}
+        style={{ top: "36%", left: "-8rem" }}
+      ></div>
     </div>
   );
 };
